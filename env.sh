@@ -1,10 +1,23 @@
 export DEFAULT_USER='mitch'
 export EDITOR='vim'
 
+MODULE_DIR='/Users/mitch/.dotfiles/modules'
+
+source "$MODULE_DIR/fyre.sh"
+source "$MODULE_DIR/go.sh"
+
+# Prevent dupes in the command history
+setopt HIST_IGNORE_ALL_DUPS
+
 # Newline
 N=$'\n'
+NT=$'\n  '
 
+# Cargo binaries
 source $HOME/.cargo/env
+
+# Include the vscode binary because it keeps trying to dump the binary in a temp directory
+export PATH=/Users/mitch/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
 # NOTE: Array (foo) length
 # $foo[(I)$foo[-1]]
@@ -15,7 +28,7 @@ make_message () {
 }
 
 finish () {
-    local bottle='🍾'
+    local bottle='🍾 '
     local default='All done!'
     local message=${1-$default}
     local emoji=${2-$bottle}
@@ -23,16 +36,23 @@ finish () {
 }
 
 start () {
-    local robot='🤖'
+    local robot='🤖 '
     local default='Starting job...'
     local message=${1-$default}
     local emoji=${2-$robot}
     make_message $emoji $message
 }
 
+warn () {
+    local fire='🔥'
+    local default='Something broke!'
+    local message=${1-$default}
+    local emoji=${2-$fire}
+    make_message $emoji $message
+}
+
 loop_print_eval () {
-    local commands=${(@s/:/)1}
-    
+    eval $1 # :( improve this implementation
 }
 
 # Env configuration helpers
@@ -50,6 +70,7 @@ zsh_restart () {
 alias envconfig="$EDITOR ~/.misc/env.sh && source ~/.misc/env.sh"
 alias zshconfig="$EDITOR ~/.zshrc && source ~/.zshrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
+alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bundles"
 
 # easy buttons
 alias c='clear'
@@ -58,6 +79,11 @@ alias s='cd ~/Stuff'
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
 alias clean='rm -rf *'
+alias fuck_you_zsh="rm ~/.zcompdump*"
+
+vundle_update () {
+    vim +PluginUpdate +qall
+}; alias vupdate="vundle_update"
 
 # Go stuff
 export GOPATH=/Users/mitch/Go
@@ -81,42 +107,4 @@ mkgo () {
     echo "$boilerplate" > "$working_dir/$1.go" &&\
     finish
 }
-
-# Include the vscode binary because it keeps trying to dump the binary in a temp directory
-export PATH=/Users/mitch/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
-
-# Git workflow
-fyre_update () {
-    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    if [[ "$CURRENT_BRANCH" == "dev" ]]; then
-        echo "You'll need to be on a working branch to use this command.";
-        return;
-    fi
-
-    local commands=(
-        "Checking out dev... && git checkout dev;"
-        "Pulling it down... && git pull;"
-        "Checking out $CURRENT_BRANCH... && git checkout "$CURRENT_BRANCH";"
-        "Merging in dev... && git merge dev;"
-    )
-
-    start 'Merging `dev` into current branch'
-    loop_print_eval "$commands"
-    finish
-}; alias fupdate="fyre_update"
-
-fyre_rebase () {
-    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    if [[ "$CURRENT_BRANCH" == "dev" ]]; then
-        echo "You'll need to be on a working branch to use this command.";
-        return;
-    fi
-    start "Rebasing $CURRENT_BRANCH into \`dev\`..."
-    echo ": Checking out dev..." && git checkout dev && \
-    echo ": Pulling down dev..." && git pull && \
-    echo ": Checking out $CURRENT_BRANCH..." && git checkout "$CURRENT_BRANCH" && \
-    echo ": Rebasing..." && git rebase -i dev && \
-    echo ": Pushing up..." && git push -f origin "$CURRENT_BRANCH" && \
-    finish
-}; alias frebase="fyre_rebase"
 
