@@ -44,7 +44,7 @@ start () {
 }
 
 warn () {
-    local fire='🔥'
+    local fire='🔥 '
     local default='Something broke!'
     local message=${1-$default}
     local emoji=${2-$fire}
