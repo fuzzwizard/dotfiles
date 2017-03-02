@@ -1,4 +1,5 @@
 ## TODO:
 [] vscode extensions
-[] brew & brew cask store
-[] brew & brew cask install from list
+[x] brew & brew cask store
+[x] brew & brew cask install from list
+[] \*rc files symlinked
