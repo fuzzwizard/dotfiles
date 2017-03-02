@@ -5,6 +5,7 @@ MODULE_DIR='/Users/mitch/.dotfiles/modules'
 
 source "$MODULE_DIR/fyre.sh"
 source "$MODULE_DIR/go.sh"
+source "$MODULE_DIR/brew.sh"
 
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
