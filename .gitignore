@@ -1,0 +1,4 @@
+*.env
+*.log
+*.ignoreme
+node_modules
