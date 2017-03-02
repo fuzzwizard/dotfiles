@@ -25,3 +25,4 @@ mkdir -p ~/Go/{src/github.com/fuzzwizard,pkg,bin}
 # install saved brews from BREWS file
 
 # install saved brew casks from CASKS file
+ln settings.json ~/Library/Application\ Support/Code/User/settings.json
