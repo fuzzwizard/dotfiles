@@ -3,10 +3,6 @@ export EDITOR='vim'
 
 MODULE_DIR='/Users/mitch/.dotfiles/modules'
 
-source "$MODULE_DIR/fyre.sh"
-source "$MODULE_DIR/go.sh"
-source "$MODULE_DIR/brew.sh"
-
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
 
@@ -62,6 +58,11 @@ zsh_restart () {
     echo 'Restarting zsh....'
     exec /bin/zsh -l
 }; alias restr='zsh_restart'
+
+# import modules
+source "$MODULE_DIR/fyre.sh"
+source "$MODULE_DIR/go.sh"
+source "$MODULE_DIR/brew.sh"
 
 # configuration aliases
 alias envconfig="$EDITOR ~/.misc/env.sh && source ~/.misc/env.sh"
