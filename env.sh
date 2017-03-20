@@ -1,5 +1,5 @@
 export DEFAULT_USER='mitch'
-export EDITOR='vim'
+export EDITOR='nvim'
 
 MODULE_DIR='/Users/mitch/.dotfiles/modules'
 
@@ -71,6 +71,7 @@ alias gitconfig="$EDITOR ~/.gitconfig"
 alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bundles"
 
 # easy buttons
+alias v="$EDITOR"
 alias c='clear'
 alias work='cd ~/Fyre'
 alias s='cd ~/Stuff'
@@ -80,6 +81,18 @@ alias clean='rm -rf *'
 alias fuck_you_zsh="rm ~/.zcompdump*"
 
 vundle_update () {
-    vim +PluginUpdate +qall
+    "$EDITOR +PluginUpdate +qall"
 }; alias vupdate="vundle_update"
 
+repremand () {
+    local i="0"
+    while [ $i -lt 60 ]
+    do
+        warn 'Bad monkey!'
+        sleep 0.04
+        i=$[$i+1]
+    done
+    clear
+};
+
+alias vim="repremand"
