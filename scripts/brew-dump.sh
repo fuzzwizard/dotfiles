@@ -3,7 +3,7 @@
 which -s brew
 if [[ $? == 0 ]]
 then
-    brew bundle dump --force --file='~/.dotfiles'
+    brew bundle dump --force --file='~/.dotfiles/Brewfile'
 else
     echo "Brew doesn't appear to be installed. You should do that!"
     echo ''
