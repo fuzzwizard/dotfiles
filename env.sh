@@ -23,7 +23,7 @@ export PATH=/Users/mitch/Applications/Visual\ Studio\ Code.app/Contents/Resource
 
 # Message shortcuts
 make_message () {
-    echo "$1  $2  $1"
+    echo "$1 $2 $1"
 }
 
 finish () {
