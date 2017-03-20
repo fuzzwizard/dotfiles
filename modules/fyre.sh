@@ -30,3 +30,9 @@ fyre_rebase () {
     __enforce_branch "Rebasing $current_branch into \`dev\`..." $commands
 }; alias frebase="fyre_rebase"
 
+# Aliases
+alias work='cd ~/Fyre'
+alias client='cd ~/Fyre/web/client'
+
+# Git alias
+alias reba='git pull --rebase origin dev'
