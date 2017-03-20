@@ -60,6 +60,7 @@ zsh_restart () {
 }; alias restr='zsh_restart'
 
 # import modules
+# TODO: better way to do this?
 source "$MODULE_DIR/fyre.sh"
 source "$MODULE_DIR/go.sh"
 source "$MODULE_DIR/brew.sh"
