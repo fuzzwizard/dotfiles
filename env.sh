@@ -21,7 +21,7 @@ export PATH=/Users/mitch/Applications/Visual\ Studio\ Code.app/Contents/Resource
 
 # Message shortcuts
 make_message () {
-    echo "$1  $2"
+    echo "$1  $2  $1"
 }
 
 finish () {
@@ -85,14 +85,7 @@ vundle_update () {
 }; alias vupdate="vundle_update"
 
 repremand () {
-    local i="0"
-    while [ $i -lt 60 ]
-    do
-        warn 'Bad monkey!'
-        sleep 0.04
-        i=$[$i+1]
-    done
-    clear
+    warn "Too bad, pal! Use \`v\` or \`nvim\` instead!"
 };
 
 alias vim="repremand"
