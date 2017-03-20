@@ -1,9 +1,9 @@
 {
-    "editor.fontFamily": "Monoid",
-    // "editor.fontFamily": "Hasklig",
+    // "editor.fontFamily": "Monoid",
+    "editor.fontFamily": "Hasklig",
     // "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "100",
+    // "editor.fontWeight": "100",
     "editor.renderWhitespace": "boundary",
     "eslint.validate": [
         "javascript",
@@ -20,7 +20,10 @@
     ],
     "window.zoomLevel": -1,
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Hopscotch",
+    "editor.lineHeight": 20,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Solarized Dark",
     // "workbench.colorTheme": "Toothpaste",
-    "workbench.welcome.enabled": false
-}
+    "workbench.welcome.enabled": false,
+    "workbench.iconTheme": "vs-seti"
+  }
