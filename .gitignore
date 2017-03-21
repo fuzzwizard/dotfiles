@@ -2,3 +2,4 @@
 *.log
 *.ignoreme
 node_modules
+*.local.*

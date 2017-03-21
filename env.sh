@@ -1,7 +1,9 @@
-export DEFAULT_USER='mitch'
-export EDITOR='nvim'
+if test -e env.local.sh; then
+    source "$HOME/.dotfiles/env.local.sh"
+fi
 
-MODULE_DIR="/Users/$USER/.dotfiles/modules"
+export EDITOR='nvim'
+MODULE_DIR="$HOME/.dotfiles/modules"
 
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
@@ -51,7 +53,7 @@ warn () {
 # Env configuration helpers
 zshrc_resource () {
     echo 'Re-sourcing configuration files...'
-    source '/Users/mitch/.zshrc'
+    source "$HOME/.zshrc"
 }; alias resrc='zshrc_resource'
 
 zsh_restart () {
