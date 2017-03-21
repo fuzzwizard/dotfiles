@@ -1,7 +1,7 @@
 export DEFAULT_USER='mitch'
 export EDITOR='nvim'
 
-MODULE_DIR='/Users/mitch/.dotfiles/modules'
+MODULE_DIR="/Users/$USER/.dotfiles/modules"
 
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
