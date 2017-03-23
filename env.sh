@@ -3,7 +3,8 @@ if test -e env.local.sh; then
 fi
 
 export EDITOR='nvim'
-MODULE_DIR="$HOME/.dotfiles/modules"
+DOTFILES_DIR="$HOME/.dotfiles"
+MODULE_DIR="$DOTFILES_DIR/modules"
 
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
@@ -68,8 +69,8 @@ source "$MODULE_DIR/go.sh"
 source "$MODULE_DIR/brew.sh"
 
 # configuration aliases
-alias envconfig="$EDITOR ~/.misc/env.sh && source ~/.misc/env.sh"
-alias zshconfig="$EDITOR ~/.zshrc && source ~/.zshrc"
+alias envconfig="$EDITOR $DOTILES_DIR/env.sh && resrc"
+alias zshconfig="$EDITOR ~/.zshrc && resrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bundles"
 
