@@ -1,0 +1,48 @@
+let g:airline_powerline_fonts=1
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" Split commands, sensibly
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
+
+
+" ZSH default
+set shell=/bin/zsh
+
+" NOTE(ms): stolen from a medium article that i forgot the name of 😭
+" Window navigation function
+" Make ctrl-h/j/k/l move between windows and auto-insert in terminals
+func! s:mapMoveToWindowInDirection(direction)
+    func! s:maybeInsertMode(direction)
+        stopinsert
+        execute "wincmd" a:direction
+
+        if &buftype == 'terminal'
+            startinsert!
+        endif
+    endfunc
+
+    execute "tnoremap" "<silent>" "<C-" . a:direction . ">"
+                \ "<C-\\><C-n>"
+                \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
+    execute "nnoremap" "<silent>" "<C-" . a:direction . ">"
+                \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
+endfunc
+for dir in ["h", "j", "l", "k"]
+    call s:mapMoveToWindowInDirection(dir)
+endfor
+
+set splitbelow
+set splitright
+
+" TODO: get this working
+" Javascript, Vue settings
+" autocmd Filetype javascript,vue setlocal tabstop=2 shiftwidth=2 softtabstop  expandtab
+
+" jj to esc
+imap jj <Esc>
+
+" Trim whitespace on save
+autocmd BufWritePre * %s/\s\+$//e

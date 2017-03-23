@@ -1,0 +1,7 @@
+let g:solarized_termcolors=16
+color solarized
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
