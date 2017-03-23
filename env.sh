@@ -1,3 +1,7 @@
+if test -e env.local.sh; then
+    source "$HOME/.dotfiles/env.local.sh"
+fi
+
 export EDITOR='nvim'
 MODULE_DIR="$HOME/.dotfiles/modules"
 
@@ -72,8 +76,7 @@ alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bu
 # easy buttons
 alias v="$EDITOR"
 alias c='clear'
-alias work='cd ~/Fyre'
-alias s='cd ~/Stuff'
+alias work="cd $WORK_DIR"
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
 alias clean='rm -rf *'
