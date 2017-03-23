@@ -15,15 +15,15 @@ source $ZSH/oh-my-zsh.sh
 # SSH config
 SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+if test -e "$HOME/.dotfiles/env.before.sh"; then
+    source "$HOME/.dotfiles/env.before.sh"
+fi
+
 source ~/.dotfiles/env.sh
+
+if test -e "$HOME/.dotfiles/env.after.sh"; then
+    source "$HOME/.dotfiles/env.after.sh"
+fi
 
 export NVM_DIR="/Users/mitch/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -1,7 +1,3 @@
-if test -e env.local.sh; then
-    source "$HOME/.dotfiles/env.local.sh"
-fi
-
 export EDITOR='nvim'
 MODULE_DIR="$HOME/.dotfiles/modules"
 

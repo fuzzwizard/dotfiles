@@ -2,4 +2,6 @@
 *.log
 *.ignoreme
 node_modules
-*.local.*
+
+env.before.sh
+env.after.sh
