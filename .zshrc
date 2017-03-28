@@ -10,27 +10,28 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git npm node vim go)
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # SSH config
 SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export NVM_DIR="/Users/mitch/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 if test -e "$HOME/.dotfiles/env.before.sh"; then
     source "$HOME/.dotfiles/env.before.sh"
 fi
 
-source ~/.dotfiles/env.sh
+source $HOME/.dotfiles/env.sh
 
 if test -e "$HOME/.dotfiles/env.after.sh"; then
     source "$HOME/.dotfiles/env.after.sh"
 fi
 
-export NVM_DIR="/Users/mitch/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source <(antibody init)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
