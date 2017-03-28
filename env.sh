@@ -69,7 +69,7 @@ source "$MODULE_DIR/go.sh"
 source "$MODULE_DIR/brew.sh"
 
 # configuration aliases
-alias envconfig="$EDITOR $DOTILES_DIR/env.sh && resrc"
+alias envconfig="$EDITOR $DOTFILES_DIR/env.sh && resrc"
 alias zshconfig="$EDITOR ~/.zshrc && resrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bundles"
