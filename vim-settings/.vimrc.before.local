@@ -7,7 +7,6 @@ let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 " nnoremap <C-L> <C-W><C-L>
 " nnoremap <C-H> <C-W><C-H>
 
-
 " ZSH default
 set shell=/bin/zsh
 
@@ -39,7 +38,7 @@ set splitright
 
 " TODO: get this working
 " Javascript, Vue settings
-autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop expandtab
+autocmd Filetype javascript,vue setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " jj to esc
 imap jj <Esc>
