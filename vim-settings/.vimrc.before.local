@@ -39,7 +39,7 @@ set splitright
 
 " TODO: get this working
 " Javascript, Vue settings
-" autocmd Filetype javascript,vue setlocal tabstop=2 shiftwidth=2 softtabstop  expandtab
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop expandtab
 
 " jj to esc
 imap jj <Esc>
