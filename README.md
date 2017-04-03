@@ -1,3 +1,3 @@
 ## TODO:
-[] vscode extensions
-[] \*rc files symlinked
+- [ ] vscode extensions
+- [ ] \*rc files symlinked
