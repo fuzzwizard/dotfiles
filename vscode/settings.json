@@ -22,7 +22,7 @@
     "editor.tabSize": 2,
     "editor.lineHeight": 20,
     "editor.fontSize": 14,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Monokai Dimmed",
     // "workbench.colorTheme": "Toothpaste",
     "workbench.welcome.enabled": false,
     "workbench.iconTheme": "vs-seti",
