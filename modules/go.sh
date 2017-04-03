@@ -9,10 +9,10 @@ gogo () {
 }
 
 mkgo () {
-    local boilerplate="$(old_cat /$HOME/.misc/go_bp)"
-    local git_username="$(git config --get user.name)"
-    local working_dir="$GOPATH/src/github.com/${git_username}/$1/"
-    local gitdir="$working_dir/.git"
+    local boilerplate=$(old_cat $HOME/.dotfiles/misc/go_bp)
+    local git_username=$(git config --get user.name)
+    local working_dir=$GOPATH/src/github.com/${git_username}/$1/
+    local gitdir=$working_dir/.git
 
     start "Creating new folder: $working_dir" '🐿' &&\
     mkdir -p "$gitdir" && git --git-dir="$gitdir" init &&\
