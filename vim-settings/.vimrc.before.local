@@ -1,6 +1,9 @@
 let g:airline_powerline_fonts=1
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
+" Esc to clear search
+nnoremap <esc> :noh<return><esc>
+
 " Split commands, sensibly
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>
