@@ -35,4 +35,13 @@ alias work='cd ~/Fyre'
 alias client='cd ~/Fyre/web/client'
 
 # Git alias
-alias reba='git pull --rebase origin dev'
+# alias reba='git pull --rebase origin dev'
+
+stash_and_rebase () {
+    start;
+    git stash; echo;
+
+    git pull --rebase origin dev; echo
+
+    git stash pop; echo
+}; alias reba="stash_and_rebase"
