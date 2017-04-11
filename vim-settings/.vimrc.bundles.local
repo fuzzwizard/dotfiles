@@ -1,3 +1,4 @@
 Bundle 'posva/vim-vue'
 Bundle 'digitaltoad/vim-pug'
+Plugin 'leafo/moonscript-vim'
 
