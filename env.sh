@@ -16,6 +16,9 @@ NT=$'\n  '
 # source the local bins first
 export PATH=./node_modules/.bin:$PATH
 
+# luarocks import
+export PATH=$PATH:/usr/local/lib/luarocks/bin/
+
 # Cargo binaries
 source $HOME/.cargo/env
 
@@ -64,7 +67,7 @@ zsh_restart () {
 
 # import modules
 # TODO: better way to do this?
-source "$MODULE_DIR/fyre.sh"
+# source "$MODULE_DIR/fyre.sh"
 source "$MODULE_DIR/go.sh"
 source "$MODULE_DIR/brew.sh"
 
