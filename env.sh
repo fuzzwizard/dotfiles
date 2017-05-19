@@ -81,6 +81,10 @@ alias antconfig="$EDITOR ~/.antibody-bundles && antibody bundle < ~/.antibody-bu
 alias v="$EDITOR"
 alias c='clear'
 alias work="cd $WORK_DIR"
+
+alias dl="cd ~/Downloads"
+alias desk="cd ~/Desktop"
+
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
 alias clean='rm -rf *'
