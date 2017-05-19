@@ -4,7 +4,8 @@
     "editor.fontLigatures": true,
     // "editor.fontWeight": "100",
     "editor.fontSize": 13,
-    // "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -13,14 +14,15 @@
     ],
     "files.associations": {
         "*.vue": "vue",
-        "*.js": "javascript"
+        "*.js": "javascript",
+        "*.h": "c"
     },
     "editor.rulers": [
         80,
         120
     ],
     "editor.lineHeight": 16,
-    "workbench.colorTheme": "One Monokai",
+    "workbench.colorTheme": "Solarized Dark",
     // "workbench.colorTheme": "Toothpaste",
     "workbench.welcome.enabled": false,
     "workbench.iconTheme": "vs-seti",
@@ -28,9 +30,11 @@
       "editor.quickSuggestions": true
     },
     "[c]": {
-      "editor.quickSuggestions": true
+      "editor.quickSuggestions": true,
+      "editor.tabSize": 8,
+      "editor.insertSpaces": true
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
-    "window.zoomLevel": -1
+    "window.zoomLevel": 0
 }

@@ -2,4 +2,4 @@ Bundle 'posva/vim-vue'
 Bundle 'digitaltoad/vim-pug'
 Bundle 'leafo/moonscript-vim'
 Bundle 'lluchs/vim-wren'
-
+Bundle 'jansedivy/jai.vim'
