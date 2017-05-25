@@ -2,6 +2,21 @@ export EDITOR='nvim'
 DOTFILES_DIR="$HOME/.dotfiles"
 MODULE_DIR="$DOTFILES_DIR/modules"
 
+local_import () {
+    file="env.$1.sh"
+    if test -e "$DOTFILES_DIR/$file"; then
+        source "$DOTFILES_DIR/$file"
+    fi
+}
+
+local_import "before"
+local_import "local"
+
+
+if test -e $DOTFILES_DIR/env.local.sh; then
+    source "$DOTFILES_DIR/env.local.sh"
+fi
+
 if test -e env.local.sh; then
     source "$DOTFILES_DIR/env.local.sh"
 fi
@@ -99,3 +114,5 @@ repremand () {
 };
 
 alias vim="repremand"
+
+local_import "after"
