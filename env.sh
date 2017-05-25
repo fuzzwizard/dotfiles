@@ -1,10 +1,10 @@
-if test -e env.local.sh; then
-    source "$HOME/.dotfiles/env.local.sh"
-fi
-
 export EDITOR='nvim'
 DOTFILES_DIR="$HOME/.dotfiles"
 MODULE_DIR="$DOTFILES_DIR/modules"
+
+if test -e env.local.sh; then
+    source "$DOTFILES_DIR/env.local.sh"
+fi
 
 # Prevent dupes in the command history
 setopt HIST_IGNORE_ALL_DUPS
