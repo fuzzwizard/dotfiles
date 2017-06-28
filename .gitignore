@@ -4,5 +4,4 @@
 node_modules
 
 env.local.sh
-env.before.sh
-env.after.sh
+env.*.local.sh
