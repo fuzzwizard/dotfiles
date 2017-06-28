@@ -2,28 +2,25 @@
     // "editor.fontFamily": "Monoid",
     "editor.fontFamily": "Hasklig",
     "editor.fontLigatures": true,
-    // "editor.fontWeight": "100",
-    "editor.fontSize": 13,
+    "editor.fontWeight": "500",
+    "editor.fontSize": 14,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "html",
-        "vue"
-    ],
+    // "eslint.validate": [
+    //     "javascript",
+    //     "javascriptreact",
+    //     "html",
+    //     "vue"
+    // ],
     "files.associations": {
-        "*.vue": "vue",
-        "*.js": "javascript",
-        "*.h": "c"
+        "*.vue": "vue"
     },
     "editor.rulers": [
         80,
         120
     ],
     "editor.lineHeight": 16,
-    "workbench.colorTheme": "Solarized Dark",
-    // "workbench.colorTheme": "Toothpaste",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.welcome.enabled": false,
     "workbench.iconTheme": "vs-seti",
     "[cpp]": {
@@ -31,10 +28,11 @@
     },
     "[c]": {
       "editor.quickSuggestions": true,
-      "editor.tabSize": 8,
       "editor.insertSpaces": true
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
-    "window.zoomLevel": 0
+    "window.zoomLevel": -1,
+    "editor.renderIndentGuides": false,
+    "files.trimTrailingWhitespace": true
 }
