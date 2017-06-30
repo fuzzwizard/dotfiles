@@ -15,9 +15,13 @@ alias desk="cd ~/Desktop"
 
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
-alias clean='rm -rf *'
 alias fuck_you_zsh="rm ~/.zcompdump*"
 
-vundle_update () {
+alias rmrf='rm -rf'
+alias clean='rmrf *'
+alias desc='rm -r ~/Desktop/*'
+alias dowc='rm -r ~/Downloads/*'
+
+__vundle_update () {
     "$EDITOR +PluginUpdate +qall"
-}; alias vupdate="vundle_update"
+}; alias vupdate="__vundle_update"

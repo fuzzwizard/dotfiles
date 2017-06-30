@@ -2,7 +2,7 @@
     // "editor.fontFamily": "Monoid",
     "editor.fontFamily": "Hasklig",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "500",
+    "editor.fontWeight": "300",
     "editor.fontSize": 14,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
@@ -32,7 +32,7 @@
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "editor.renderIndentGuides": false,
     "files.trimTrailingWhitespace": true
 }
