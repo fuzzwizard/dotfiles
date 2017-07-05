@@ -21,7 +21,6 @@ alias rmrf='rm -rf'
 alias clean='rmrf *'
 alias desc='rm -r ~/Desktop/*'
 alias dowc='rm -r ~/Downloads/*'
+alias dot="cd $DOTFILES_DIR"
 
-__vundle_update () {
-    "$EDITOR +PluginUpdate +qall"
-}; alias vupdate="__vundle_update"
+alias vupdate="$EDITOR +PluginUpdate +qall"
