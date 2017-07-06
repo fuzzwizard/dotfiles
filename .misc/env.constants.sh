@@ -1,9 +1,8 @@
 export EDITOR='nvim'
 export DOTFILES_DIR="$HOME/.dotfiles"
 export ENVFILES_DIR=$DOTFILES_DIR
+export VIMFILE_DIR="$DOTFILES_DIR/vim-settings"
 export MODULES_DIR="$DOTFILES_DIR/modules"
-
-export Color_red=
 
 #local constants
 SPACER="  "
@@ -24,23 +23,20 @@ __source_envfile () {
     local envfile_local_path="$ENVFILES_DIR/env.$1.local.sh"
     local file_has_been_sourced=$FALSE
 
-    if [[ -e $envfile_path ]]; then
-        if [[ "$1" = "local" ]]; then
-            __debug_message "$LOCAL_ENV_EMOJI Sourcing local envfile:$t$t $envfile_path"
-        else
-            __debug_message "$ENV_EMOJI Sourcing envfile:$t$t $envfile_path"
-        fi
 
-        source $envfile_path;
-        file_has_been_sourced=$TRUE
-    fi
-
+    local path=$([ "$1" == "local" ] || printf "%s" $envfile_local && printf "%s" $envfile_local_path)
     if [ -e $envfile_local_path ]; then
-        __debug_message "$LOCAL_ENV_EMOJI Sourcing envfile:$t$t $envfile_local_path";
+        __debug_message "$LOCAL_ENV_EMOJI Sourcing local envfile:$t $path";
         source $envfile_local_path
         file_has_been_sourced=$TRUE
     else
-        __quiet_debug_message "$NO_LOCAL_EMOJI No local file found at:$t $envfile_local_path"
+        __quiet_debug_message "$NO_LOCAL_EMOJI No local file found at:$t $path"
+    fi
+
+    if [ -e $envfile_path ]; then
+        __debug_message "$ENV_EMOJI Sourcing envfile:$t$t $envfile_path"
+        source $envfile_path;
+        file_has_been_sourced=$TRUE
     fi
 
     if [[ file_has_been_sourced -eq $FALSE ]]; then

@@ -4,7 +4,6 @@ source "$HOME/.dotfiles/.misc/env.constants.sh"
 
 __source_envfile "config"
 
-
 # Env configuration helpers
 function __zshrc_resource {
     echo 'Re-sourcing configuration files...'
