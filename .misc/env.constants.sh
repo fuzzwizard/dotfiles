@@ -16,15 +16,15 @@ t="\t"
 export TRUE='1'
 export FALSE='0'
 
-export __ENV_DEBUG_FLAG=$TRUE
+export __ENV_DEBUG_FLAG=$FALSE
 
 __source_envfile () {
     local envfile_path="$ENVFILES_DIR/env.$1.sh"
     local envfile_local_path="$ENVFILES_DIR/env.$1.local.sh"
     local file_has_been_sourced=$FALSE
 
-
     local path=$([ "$1" == "local" ] || printf "%s" $envfile_local && printf "%s" $envfile_local_path)
+
     if [ -e $envfile_local_path ]; then
         __debug_message "$LOCAL_ENV_EMOJI Sourcing local envfile:$t $path";
         source $envfile_local_path
@@ -46,6 +46,7 @@ __source_envfile () {
 
 __source_module () {
     local module_path="$MODULES_DIR/$1.module.sh"
+
     if test -e $module_path; then
         __debug_message "$MODULE_EMOJI Sourcing module:$t$t $module_path"
         source $module_path;
@@ -97,3 +98,4 @@ __warn () {
     __emoji_flanked_message $emoji $message
 };
 
+__debug_message "$ENV_EMOJI Sourcing constants file:$t $(dirname "$0")"
