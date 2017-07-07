@@ -3,7 +3,7 @@ alias envconfig="$EDITOR $DOTFILES_DIR && resrc"
 alias zshconfig="$EDITOR ~/.zshrc && resrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias antconfig="$EDITOR ~/.antibody-bundles &&\
-antibody bundle < ~/.antibody-bundles"
+	antibody bundle < ~/.antibody-bundles"
 
 # easy buttons
 alias v="$EDITOR"
