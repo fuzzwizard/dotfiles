@@ -15,12 +15,23 @@ alias desk="cd ~/Desktop"
 
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
+
 alias fuck_you_zsh="rm ~/.zcompdump*"
 
 alias rmrf='rm -rf'
 alias clean='rmrf *'
-alias desc='rm -r ~/Desktop/*'
-alias dowc='rm -r ~/Downloads/*'
+alias delete_desktop='rm -r ~/Desktop/*'
+alias delete_downloads='rm -r ~/Downloads/*'
 alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="$EDITOR +PluginUpdate +qall"
+
+function __zshrc_resource {
+    echo 'Re-sourcing configuration files...'
+    source "$HOME/.zshrc"
+}; alias resrc='__zshrc_resource'
+
+function __zsh_restart {
+    echo 'Restarting zsh....'
+    exec /bin/zsh -l
+}; alias restr='__zsh_restart'

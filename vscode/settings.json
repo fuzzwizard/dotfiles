@@ -21,18 +21,15 @@
     ],
     "editor.lineHeight": 16,
     "workbench.colorTheme": "Atom One Dark",
-    "workbench.welcome.enabled": false,
+    // "workbench.welcome.enabled": false,
     "workbench.iconTheme": "vs-seti",
-    "[cpp]": {
-      "editor.quickSuggestions": true
-    },
     "[c]": {
-      "editor.quickSuggestions": true,
-      "editor.insertSpaces": true
+        "editor.insertSpaces": true
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
     "window.zoomLevel": 0,
     "editor.renderIndentGuides": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "rust.mode": "legacy"
 }

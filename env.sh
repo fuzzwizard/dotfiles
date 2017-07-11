@@ -5,15 +5,6 @@ source "$HOME/.dotfiles/.misc/env.constants.sh"
 __source_envfile "config"
 
 # Env configuration helpers
-function __zshrc_resource {
-    echo 'Re-sourcing configuration files...'
-    source "$HOME/.zshrc"
-}; alias resrc='__zshrc_resource'
-
-function __zsh_restart {
-    echo 'Restarting zsh....'
-    exec /bin/zsh -l
-}; alias restr='__zsh_restart'
 
 __source_envfile "before";
 __source_envfile "local";

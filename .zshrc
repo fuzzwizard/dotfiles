@@ -1,8 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# @TechDebt: currently hardcoded because of my bad setup on osx
 export ZSH=/Users/$(whoami)/.oh-my-zsh
 
 ZSH_THEME="agnoster"
@@ -34,3 +33,11 @@ source <(antibody init)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Cargo binaries
+export PATH="$PATH:/Users/$(whoami)/.cargo/bin"
+
+# Include the vscode binary because it keeps trying to dump the binary in a temp directory
+export PATH="/Users/$(whoami)/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
+
