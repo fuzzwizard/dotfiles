@@ -35,3 +35,5 @@ function __zsh_restart {
     echo 'Restarting zsh....'
     exec /bin/zsh -l
 }; alias restr='__zsh_restart'
+
+function __unix_timestamp { date +%s; }
