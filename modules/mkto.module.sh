@@ -16,3 +16,7 @@ alias mcl_stop="cd $WORK_DIR/docker-compose/mercury;\
 
 alias mlm_tail="tail -f $WORK_DIR/docker-compose/mercury/nohup.out"
 alias mcl_tail="docker logs -f mercury_mercury-client_1 --tail 100"
+
+# This sleep 60 is so bad that I am embarassed to commit it.
+alias mlm="mlm_stop; sleep 60; mlm_start; mlm_tail;"
+alias storybook="work; cd mercury-storybook; yarn && yarn storybook;"
