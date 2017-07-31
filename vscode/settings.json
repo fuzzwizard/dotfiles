@@ -4,7 +4,7 @@
     "editor.lineHeight": 16,
     "editor.fontLigatures": true,
     "editor.fontWeight": "100",
-
+    "workbench.editor.showTabs": false,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "eslint.validate": [
@@ -27,9 +27,14 @@
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 110,
-    "window.zoomLevel": -1,
     "editor.renderIndentGuides": false,
     "files.trimTrailingWhitespace": true,
     "rust.mode": "legacy",
-    "typescript.check.npmIsInstalled": false
+    "typescript.check.npmIsInstalled": false,
+    "vim.enableNeovim": true,
+    "vim.autoindent": true,
+    "vim.easymotion": true,
+    "vim.neovimPath": "nvim",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.zoomLevel": -1
 }
