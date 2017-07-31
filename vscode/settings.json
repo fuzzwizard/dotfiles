@@ -36,5 +36,9 @@
     "vim.easymotion": true,
     "vim.neovimPath": "nvim",
     "vim.disableAnnoyingNeovimMessage": true,
-    "window.zoomLevel": -1
+    "window.zoomLevel": -1,
+    "d.dfmtPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/dfmt/bin/dfmt",
+    "d.dcdClientPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-client",
+    "d.dcdServerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-server",
+    "d.dscannerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/Dscanner/bin/dscanner"
 }
