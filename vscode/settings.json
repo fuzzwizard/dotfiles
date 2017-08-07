@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "Hasklig",
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "editor.lineHeight": 16,
     "editor.fontLigatures": true,
     "editor.fontWeight": "100",
@@ -21,7 +21,7 @@
     "editor.rulers": [
         80, 110
     ],
-    "workbench.colorTheme": "Firewatch Theme",
+    "workbench.colorTheme": "Monokai Dimmed",
     "workbench.iconTheme": "vs-seti",
     "[c]": {
         "editor.insertSpaces": true
@@ -32,14 +32,20 @@
     "files.trimTrailingWhitespace": true,
     "rust.mode": "legacy",
     "typescript.check.npmIsInstalled": false,
-    "vim.enableNeovim": true,
+   /*  "vim.enableNeovim": true,
     "vim.autoindent": true,
     "vim.easymotion": true,
     "vim.neovimPath": "nvim",
     "vim.disableAnnoyingNeovimMessage": true,
-    "window.zoomLevel": -1,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ], */
     "d.dfmtPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/dfmt/bin/dfmt",
     "d.dcdClientPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-client",
     "d.dcdServerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-server",
-    "d.dscannerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/Dscanner/bin/dscanner"
+    "d.dscannerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/Dscanner/bin/dscanner",
+    "window.zoomLevel": 1
 }
