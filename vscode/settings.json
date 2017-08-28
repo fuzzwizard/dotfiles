@@ -6,6 +6,7 @@
     "editor.fontWeight": "100",
     "workbench.editor.showTabs": false,
     "editor.renderWhitespace": "boundary",
+    "editor.autoIndent": false,
     "editor.tabSize": 2,
     "eslint.validate": [
         "javascript",
