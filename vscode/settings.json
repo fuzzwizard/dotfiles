@@ -3,7 +3,7 @@
     "editor.fontSize": 14,
     "editor.lineHeight": 16,
     "editor.fontLigatures": true,
-    "editor.fontWeight": "100",
+    // "editor.fontWeight": "100",
     "workbench.editor.showTabs": false,
     "editor.renderWhitespace": "boundary",
     "editor.autoIndent": false,
@@ -47,5 +47,9 @@
     "d.dcdClientPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-client",
     "d.dcdServerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/DCD/bin/dcd-server",
     "d.dscannerPath": "/Users/msmall/.vscode/extensions/webfreak.code-d-0.16.2/bin/Dscanner/bin/dscanner",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin"
+    },
+    "git.confirmSync": false
 }
