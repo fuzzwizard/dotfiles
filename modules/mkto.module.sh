@@ -1,3 +1,4 @@
+alias dcmp="docker-compose"
 DC="docker-compose"
 
 __in () {
