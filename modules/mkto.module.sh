@@ -1,5 +1,6 @@
-alias dcmp="docker-compose"
 DC="docker-compose"
+unalias d
+alias d="$DC"
 
 __in () {
 	pushd "/Users/msmall/Work/docker-compose/mercury" > /dev/null;
@@ -10,12 +11,15 @@ __out () {
 }
 
 __dc_do_one () {
-	__in; docker-compose "$@"; __out; 
+	__in;
+	docker-compose "$@";
+	__out;
 }
 
 alias dc_pull="__dc_do_one pull"
 
-alias dc_start="__dc_do_one \"up &\""
+alias dc_up="__in; $DC up &; __out;"
+alias dc_up_block="__dc_do_one up"
 
 alias dc_stop="__dc_do_one stop"
 
@@ -39,4 +43,3 @@ alias hgclient_tail="docker logs -f mercury_mercury-client_1 --tail 100"
 alias hgserver_tail="docker logs -f mercury_mercury-server_1 --tail 100"
 
 alias hg_storybook="work; cd mercury-storybook; yarn && yarn storybook;"
-alias secret_crimes="rm -rf ~/Secret\ Crimes/*"
