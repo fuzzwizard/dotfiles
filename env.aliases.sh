@@ -1,12 +1,12 @@
 # configuration aliases
-alias envconfig="$EDITOR_WAIT $DOTFILES_DIR && resrc"
-alias zshconfig="$EDITOR_WAIT ~/.zshrc && resrc"
-alias antconfig="$EDITOR_WAIT ~/.antibody-bundles && \
+alias envconfig="$EDITOR $DOTFILES_DIR && resrc"
+alias zshconfig="$EDITOR ~/.zshrc && resrc"
+alias antconfig="$EDITOR ~/.antibody-bundles && \
 	antibody bundle < ~/.antibody-bundles"
-alias gitconfig="$EDITOR ~/.gitconfig"
+alias gitconfig="$EDITOR_NOWAIT ~/.gitconfig"
 
 # easy buttons
-alias v="$EDITOR"
+alias v="nvim"
 alias c='clear'
 alias work="cd $WORK_DIR"
 
@@ -24,7 +24,7 @@ alias delete_desktop='rm -r ~/Desktop/*'
 alias delete_downloads='rm -r ~/Downloads/*'
 alias dot="cd $DOTFILES_DIR"
 
-alias vupdate="$EDITOR +PluginUpdate +qall"
+alias vupdate="nvim +PluginUpdate +qall"
 
 alias file_find="find . -name "; alias ff="file_find"
 
