@@ -1,4 +1,5 @@
-export EDITOR='nvim'
+export EDITOR='code'
+export EDITOR_WAIT='code -w'
 export DOTFILES_DIR="$HOME/.dotfiles"
 export ENVFILES_DIR=$DOTFILES_DIR
 export VIMFILE_DIR="$DOTFILES_DIR/vim-settings"

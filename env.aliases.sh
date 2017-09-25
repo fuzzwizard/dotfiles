@@ -1,9 +1,9 @@
 # configuration aliases
-alias envconfig="$EDITOR $DOTFILES_DIR && resrc"
-alias zshconfig="$EDITOR ~/.zshrc && resrc"
-alias gitconfig="$EDITOR ~/.gitconfig"
-alias antconfig="$EDITOR ~/.antibody-bundles &&\
+alias envconfig="$EDITOR_WAIT $DOTFILES_DIR && resrc"
+alias zshconfig="$EDITOR_WAIT ~/.zshrc && resrc"
+alias antconfig="$EDITOR_WAIT ~/.antibody-bundles && \
 	antibody bundle < ~/.antibody-bundles"
+alias gitconfig="$EDITOR ~/.gitconfig"
 
 # easy buttons
 alias v="$EDITOR"
@@ -11,7 +11,7 @@ alias c='clear'
 alias work="cd $WORK_DIR"
 
 alias dl="cd ~/Downloads"
-alias desk="cd ~/Desktop"
+alias dk="cd ~/Desktop"
 
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
 alias cat='ccat' # Colorful `cat`!!
@@ -26,7 +26,7 @@ alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="$EDITOR +PluginUpdate +qall"
 
-alias ff="find . -name "
+alias filefind="find . -name "
 
 function __zshrc_resource {
     echo 'Re-sourcing configuration files...'
