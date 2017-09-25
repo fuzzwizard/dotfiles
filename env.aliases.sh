@@ -26,7 +26,7 @@ alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="$EDITOR +PluginUpdate +qall"
 
-alias filefind="find . -name "
+alias file_find="find . -name "; alias ff="file_find"
 
 function __zshrc_resource {
     echo 'Re-sourcing configuration files...'
