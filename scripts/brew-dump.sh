@@ -18,11 +18,9 @@ __main_procedure () {
 
     if [ -e "$brewfile_path" ]; then
         __merge_brewfiles_keeping_old "$brewfile_path" "$brewfile_path_temp"
-    else
-        mv "$brewfile_path_temp" "$brewfile_path"
     fi
 
-    echo "Shouldn't print"
+    mv "$brewfile_path_temp" "$brewfile_path"
 }
 
 which -s brew

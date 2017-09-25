@@ -5,7 +5,6 @@ alias gitconfig="$EDITOR ~/.gitconfig"
 alias antconfig="$EDITOR ~/.antibody-bundles &&\
 	antibody bundle < ~/.antibody-bundles"
 
-
 # easy buttons
 alias v="$EDITOR"
 alias c='clear'
@@ -26,6 +25,8 @@ alias delete_downloads='rm -r ~/Downloads/*'
 alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="$EDITOR +PluginUpdate +qall"
+
+alias ff="find . -name "
 
 function __zshrc_resource {
     echo 'Re-sourcing configuration files...'
