@@ -41,3 +41,4 @@ export PATH="$PATH:/Users/mitchsmall/.cargo/bin"
 # Include the vscode binary because it keeps trying to dump the binary in a temp directory
 export PATH="/Users/mitchsmall/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 
+eval "$(thefuck --alias)";
