@@ -1,0 +1,5 @@
+# .cronjobs
+.gitconfig
+.ghci -> ~
+.zshrc -> ~/
+.vimrc -> /Users/mitchsmall/.spf13-vim-3/.vimrc
