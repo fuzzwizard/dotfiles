@@ -1,12 +1,12 @@
 #!/bin/sh
 
-source "$HOME/.dotfiles/.misc/env.constants.sh"
+source "$HOME/.dotfiles/.misc/init.sh"
 
 __DRY_FLAG=$TRUE
 
 __make_symlink () {
     if [[ $__DRY_FLAG = $TRUE ]]; then
-        echo "Dry run: $1 ; $2"
+        echo "$1 -> $2"
         return
     fi
 

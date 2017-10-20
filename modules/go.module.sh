@@ -1,22 +1,33 @@
-export GOPATH=/Users/mitch/Go
+export GOPATH=/Users/$(whoami)/Go
 export PATH=$PATH:$GOPATH/bin
 alias gwd="cd $GOPATH"
 
+GREEN="\e[32;m"
+N="\e[0;m"
+GIT_UN="fuzzwizard"
+
+go_make_workspace_directories () {
+    mkdir -p $GOPATH/{src,pkg,bin} > /dev/null
+}
+
 gogo () {
-    local git_username="$(git config --get user.name)"
-    local working_dir="$GOPATH/src/github.com/${git_username}/"
-    cd $working_dir
+    go_make_workspace_directories;
+    local working_dir="$GOPATH/src/github.com/$GIT_UN/"
+    mkdir -p $working_dir
+    pushd $working_dir > /dev/null;
 }
 
 mkgo () {
-    local boilerplate=$(old_cat $HOME/.dotfiles/.misc/go_bp)
-    local git_username=$(git config --get user.name)
-    local working_dir=$GOPATH/src/github.com/${git_username}/$1/
-    local gitdir=$working_dir/.git
+    go_make_workspace_directories;
+    local boilerplate=$HOME/.dotfiles/.misc/go-boilerplate.go
+    local working_dir="$GOPATH/src/github.com/$GIT_UN/$1/"
+    local gitdir="$working_dir/.git"
 
-    start "Creating new folder: $working_dir" '🐿' &&\
-    mkdir -p "$gitdir" && git --git-dir="$gitdir" init &&\
-    echo "$boilerplate" > "$working_dir/$1.go" &&\
-    finish
+    echo "$GREEN### 🐿  Creating new folder: $working_dir $N"
+    mkdir -p "$gitdir"
+
+    pushd $working_dir > /dev/null
+    git --git-dir="$gitdir" init .
+    cp $boilerplate "$working_dir/$1.go"
 }
 

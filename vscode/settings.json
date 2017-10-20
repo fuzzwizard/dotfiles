@@ -1,7 +1,11 @@
 {
-    "editor.fontFamily": "Hasklig",
+    "editor.snippetSuggestions": "top",
+    // "editor.fontFamily": "Hasklig",
+    // "editor.fontFamily": "Iosevka",
+    "editor.fontFamily": "Anonymous Pro",
     "editor.fontSize": 14,
-    "editor.lineHeight": 16,
+    "editor.lineHeight": 18,
+    "editor.fontWeight": "100",
     "editor.fontLigatures": true,
     "workbench.editor.showTabs": false,
     "editor.renderWhitespace": "boundary",
@@ -14,19 +18,22 @@
     ],
     "files.associations": {
         "*.vue": "vue",
-        "Justfile": "makefile"
+        "Justfile": "makefile",
+        "*.ignoreme": "plaintext",
+        "*.todo": "todo"
     },
+    "editor.wordWrapColumn": 110,
     "editor.rulers": [
         80, 110
     ],
+    "workbench.startupEditor": "newUntitledFile",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "One Dark Theme",
     "workbench.iconTheme": "vs-seti",
     "[c]": {
         "editor.insertSpaces": true
     },
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 110,
     "editor.renderIndentGuides": false,
     "files.trimTrailingWhitespace": true,
     "rust.mode": "legacy",

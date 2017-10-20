@@ -1,11 +1,8 @@
-source "$HOME/.dotfiles/.misc/env.constants.sh"
+source "$HOME/.dotfiles/.misc/init.sh"
+
 # @Volitile: This import provides the necessary forward declaration for some
 # script dependencies.
-
 __source_envfile "config"
-
-# Env configuration helpers
-
 __source_envfile "before";
 __source_envfile "local";
 __source_envfile "aliases";
