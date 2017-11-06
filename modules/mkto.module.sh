@@ -3,11 +3,15 @@ alias d="docker-compose"
 
 YAML_DIR="/Users/msmall/Work/docker-compose/mercury"
 
+__DD_POCKET=""
+
 dd () {
 	if [[ "$(pwd)" != $YAML_DIR ]]; then
-		pushd $YAML_DIR > /dev/null;
-	else
-		popd > /dev/null;
+		__DD_POCKET="$(pwd)";
+		cd $YAML_DIR;
+	elif [[ -n $__DD_POCKET ]]; then
+		cd $__DD_POCKET;
+		__DD_POCKET="";
 	fi
 }
 
@@ -22,4 +26,4 @@ alias hg_storybook="work; cd mercury-storybook; yarn && yarn storybook;"
 alias daystart="$WORK_DIR/.misc/day start"
 alias dayend="$WORK_DIR/.misc/day end"
 
-alias dedangle=docker volume rm "$(docker volume ls -qf dangling=true)"
+alias dedangle="docker volume rm \"$(docker volume ls -qf dangling=true)\""
