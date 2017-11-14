@@ -12,8 +12,12 @@ dd () {
 	elif [[ -n $__DD_POCKET ]]; then
 		cd $__DD_POCKET;
 		__DD_POCKET="";
-	fi
+	else; 
+		echo "Nowhere to navigate.";
+	fi;
 }
+
+alias sc="cd ~/Secret\ Crimes"
 
 alias mlm_tail="tail -f $YAML_DIR/nohup.out"
 alias hgclient_tail="docker logs -f mercury_mercury-client_1 --tail 500 \
