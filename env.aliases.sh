@@ -18,15 +18,23 @@ alias cat='ccat' # Colorful `cat`!!
 
 alias fuck_you_zsh="rm ~/.zcompdump*"
 
+alias rmr='rm -r'
 alias rmrf='rm -rf'
-alias clean='rmrf *'
-alias delete_desktop='rm -r ~/Desktop/*'
-alias delete_downloads='rm -r ~/Downloads/*'
+alias clean='rmr *'
+alias clean_desk='rm -r ~/Desktop/*'
+alias clean_dl='rm -r ~/Downloads/*'
 alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="nvim +PluginUpdate +qall"
 
 alias file_find="find . -name "; alias ff="file_find"
+
+unalias l
+unalias ll
+unalias dir
+alias l='ls'
+alias ll='ls -Glha'
+alias dir='ls -Glha'
 
 function __zshrc_resource {
     echo 'Re-sourcing configuration files...'

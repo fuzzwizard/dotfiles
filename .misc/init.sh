@@ -17,7 +17,7 @@ t="\t"
 export TRUE='1'
 export FALSE='0'
 
-export __ENV_DEBUG_FLAG=$FALSE
+export __ENV_DEBUG_FLAG=$TRUE
 
 __source_envfile () {
     local envfile_path="$ENVFILES_DIR/env.$1.sh"
