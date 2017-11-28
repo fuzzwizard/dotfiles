@@ -1,3 +1,5 @@
-## TODO:
-- [ ] vscode extensions
-- [ ] \*rc files symlinked
+# Dotfiles
+
+My dotfiles for various configurations. 
+
+# TODO:
