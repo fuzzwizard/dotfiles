@@ -17,7 +17,7 @@ dd () {
 	fi;
 }
 
-alias sc="cd ~/Secret\ Crimes"
+alias sc="cd ~/secretcrimes"
 
 alias mlm_tail="tail -f $YAML_DIR/nohup.out"
 alias hgclient_tail="docker logs -f mercury_mercury-client_1 --tail 500 \

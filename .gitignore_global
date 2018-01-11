@@ -78,3 +78,5 @@ Thumbs.db
 # Domain specific packages #
 ############################
 node_modules
+npm-debug.log
+npm-debug.log.*
