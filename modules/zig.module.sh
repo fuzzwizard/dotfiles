@@ -1,1 +1,1 @@
-export PATH=$PATH:~/secretcrimes/build/zig
+export PATH=$PATH:~/secretcrimes/zig/build
