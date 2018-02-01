@@ -4,7 +4,7 @@ export PATH=$HOME/4coder:/usr/local/sbin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$(whoami)/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="af-magic"
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
