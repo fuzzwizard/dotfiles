@@ -5,13 +5,13 @@ source ./_script_utils.sh
 DRY_FLAG=$TRUE
 
 __merge_brewfiles_keeping_old () {
-    # nothing :D
+   echo ""; 
 }
 
 __main_procedure () {
     local dotfiles_dir="~/.dotfiles"
     local brewfile_path="$dotfiles_dir/Brewfile"
-    local ts=$(unix_timestamp)
+    local ts=$(date +%s)
     local brewfile_path_temp="$brewfile_path.$ts"
 
     brew bundle dump --force --file="$brewfile_path_temp"
@@ -20,7 +20,8 @@ __main_procedure () {
         __merge_brewfiles_keeping_old "$brewfile_path" "$brewfile_path_temp"
     fi
 
-    mv "$brewfile_path_temp" "$brewfile_path"
+    cp -f "$brewfile_path_temp" "$brewfile_path"
+    rm $brewfile_path_temp
 }
 
 which -s brew
