@@ -12,8 +12,6 @@ __make_symlink () {
 
     if (( $# == 2 )); then
         ln -s $1 $2
-    else
-        echo '__make_symlink needs exactly two (2) arguments.'
     fi
 }
 

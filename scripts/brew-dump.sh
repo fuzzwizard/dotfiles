@@ -1,11 +1,9 @@
 #!/bin/bash
 
-source ./_script_utils.sh
-
 DRY_FLAG=$TRUE
 
 __merge_brewfiles_keeping_old () {
-   echo ""; 
+    echo "UNIMPLEMENTED";
 }
 
 __main_procedure () {

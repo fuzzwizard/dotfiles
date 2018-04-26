@@ -8,7 +8,7 @@ ZSH_THEME="af-magic"
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm node vim go)
+plugins=(git npm node docker-compose)
 
 # Load ZSH stuff firstmost
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,4 +1,5 @@
 # configuration aliases
+alias dot="cd $DOTFILES_DIR"
 alias envconfig="$EDITOR $DOTFILES_DIR && resrc"
 alias zshconfig="$EDITOR ~/.zshrc && resrc"
 alias antconfig="$EDITOR ~/.antibody-bundles && \
@@ -14,16 +15,9 @@ alias dl="cd ~/Downloads"
 alias dk="cd ~/Desktop"
 
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
-alias cat='ccat' # Colorful `cat`!!
+alias cat='ccat' # Colorful `cat`!! installed via brew
 
-alias fuck_you_zsh="rm ~/.zcompdump*"
-
-alias rmr='rm -r'
 alias rmrf='rm -rf'
-alias clean='rmr *'
-alias clean_desk='rm -r ~/Desktop/*'
-alias clean_dl='rm -r ~/Downloads/*'
-alias dot="cd $DOTFILES_DIR"
 
 alias vupdate="nvim +PluginUpdate +qall"
 
@@ -31,7 +25,6 @@ alias file_find="find . -name "; alias ff="file_find"
 
 unalias l
 unalias ll
-unalias dir
 alias l='ls'
 alias ll='ls -Glha'
 alias dir='ls -Glha'

@@ -5,4 +5,6 @@ alias brew_update="brew update; brew upgrade; brew doctor;"
 
 alias brew_clean="brew cleanup; brew cask cleanup;"
 
-alias brew_dump="cat $DOTFILE_DIR/.scripts/brew_dump.sh | zsh"
+brew_dump() {
+  brew bundle dump --force --file=$1;
+}

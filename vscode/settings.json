@@ -28,7 +28,7 @@
     ],
     "workbench.startupEditor": "newUntitledFile",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "One Dark Theme",
+    "workbench.colorTheme": "Red",
     "workbench.iconTheme": "vs-seti",
     "[c]": {
         "editor.insertSpaces": true

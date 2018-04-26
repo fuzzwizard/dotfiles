@@ -1,4 +1,3 @@
-unalias d
 alias d="docker-compose"
 
 YAML_DIR="/Users/msmall/Work/docker-compose/mercury"
@@ -12,7 +11,7 @@ dd () {
 	elif [[ -n $__DD_POCKET ]]; then
 		cd $__DD_POCKET;
 		__DD_POCKET="";
-	else; 
+	else;
 		echo "Nowhere to navigate.";
 	fi;
 }
@@ -27,7 +26,7 @@ alias hgserver_tail="docker logs -f mercury_mercury-server_1 --tail 1000 \
 
 alias hg_storybook="work; cd mercury-storybook; yarn && yarn storybook;"
 
-alias daystart="$WORK_DIR/.misc/day start"
-alias dayend="$WORK_DIR/.misc/day end"
+alias daystart="$WORK_DIR/mercury-misc/day start"
+alias dayend="$WORK_DIR/mercury-misc/day end"
 
 alias dedangle="docker volume rm \"$(docker volume ls -qf dangling=true)\""

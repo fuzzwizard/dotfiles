@@ -5,4 +5,4 @@ setopt HIST_IGNORE_ALL_DUPS
 export PATH=./node_modules/.bin:$PATH
 
 # luarocks import
-export PATH=$PATH:/usr/local/lib/luarocks/bin/
+# export PATH=$PATH:/usr/local/lib/luarocks/bin/
