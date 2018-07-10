@@ -11,6 +11,5 @@ __source_envfile "aliases";
 __source_module "go"
 __source_module "brew"
 __source_module "mkto"
-__source_module "zig"
 
 __source_envfile "after"

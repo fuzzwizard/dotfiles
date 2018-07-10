@@ -18,7 +18,6 @@ source $ZSH/oh-my-zsh.sh
 # SSH config
 SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# TODO: Can these be moved to
 export NVM_DIR="/Users/$(whoami)/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -42,3 +41,4 @@ export PATH="$PATH:/Users/$(whoami)/.cargo/bin"
 export PATH="/Users/$(whoami)/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 
 eval "$(thefuck --alias)";
+

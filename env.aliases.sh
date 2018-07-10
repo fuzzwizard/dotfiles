@@ -21,8 +21,6 @@ alias rmrf='rm -rf'
 
 alias vupdate="nvim +PluginUpdate +qall"
 
-alias file_find="find . -name "; alias ff="file_find"
-
 unalias l
 unalias ll
 alias l='ls'

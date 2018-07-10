@@ -21,7 +21,7 @@ __make_symlink_to_home_dotfile () {
 
 __make_symlink_to_home_dotfile ".zshrc"
 __make_symlink_to_home_dotfile ".profile"
-__make_symlink_to_home_dotfile ".ghci"
+# __make_symlink_to_home_dotfile ".ghci"
 
 __make_symlinks_for_spf_settings () {
     for filepath in $VIMFILE_DIR/\.*; do
