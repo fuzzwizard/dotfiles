@@ -1,8 +1,7 @@
 alias brew_backup="brew leaves > ~/.brew-backup;\
 brew cask list > ~/.brew-cask-backup"
 
-alias __brew_clean="brew cleanup; brew cask cleanup;"
-alias brew_update="brew update && brew upgrade && brew cask upgrade; __brew_clean; brew doctor;"
+alias brew_update="brew update && brew upgrade && brew cask upgrade; brew cleanup; brew doctor;"
 
 brew_dump() {
   brew bundle dump --force --file=$1;

@@ -1,5 +1,5 @@
-export EDITOR='code -w'
-export EDITOR_NOWAIT='code'
+export EDITOR='code-insiders -w'
+export EDITOR_NOWAIT='code-insiders'
 export DOTFILES_DIR="$HOME/.dotfiles"
 export ENVFILES_DIR=$DOTFILES_DIR
 export VIMFILE_DIR="$DOTFILES_DIR/vim-settings"

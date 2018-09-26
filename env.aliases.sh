@@ -6,6 +6,8 @@ alias antconfig="$EDITOR ~/.antibody-bundles && \
 	antibody bundle < ~/.antibody-bundles"
 alias gitconfig="$EDITOR_NOWAIT ~/.gitconfig"
 
+alias code="$EDITOR_NOWAIT"
+
 # easy buttons
 alias v="nvim"
 alias c='clear'
