@@ -42,3 +42,5 @@ export PATH="/Users/$(whoami)/Applications/Visual\ Studio\ Code.app/Contents/Res
 
 eval "$(thefuck --alias)";
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
