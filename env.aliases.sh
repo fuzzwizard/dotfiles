@@ -1,11 +1,12 @@
 # configuration aliases
-alias dot="cd $DOTFILES_DIR"
+alias dot="$EDITOR_NOWAIT $DOTFILES_DIR"
 alias envconfig="$EDITOR $DOTFILES_DIR && resrc"
 alias zshconfig="$EDITOR ~/.zshrc && resrc"
 alias antconfig="$EDITOR ~/.antibody-bundles && \
 	antibody bundle < ~/.antibody-bundles"
 alias gitconfig="$EDITOR_NOWAIT ~/.gitconfig"
 
+# this seems dumb
 alias code="$EDITOR_NOWAIT"
 
 # easy buttons
@@ -29,10 +30,10 @@ alias l='ls'
 alias ll='ls -Glha'
 alias dir='ls -Glha'
 
-function __zshrc_resource {
+function __zshrc_re_source {
     echo 'Re-sourcing configuration files...'
     source "$HOME/.zshrc"
-}; alias resrc='__zshrc_resource'
+}; alias resrc='__zshrc_re_source'
 
 function __zsh_restart {
     echo 'Restarting zsh....'
