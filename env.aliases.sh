@@ -6,19 +6,17 @@ alias antconfig="$EDITOR ~/.antibody-bundles && \
 	antibody bundle < ~/.antibody-bundles"
 alias gitconfig="$EDITOR_NOWAIT ~/.gitconfig"
 
-# this seems dumb
 alias code="$EDITOR_NOWAIT"
 
-# easy buttons
 alias v="nvim"
 alias c='clear'
-alias work="cd $WORK_DIR"
+alias work="cd $DEVDOCKER_DIR"
 
 alias dl="cd ~/Downloads"
 alias dk="cd ~/Desktop"
 
 alias old_cat='cat' # Ensures that we can access the color-free `cat`
-alias cat='ccat' # Colorful `cat`!! installed via brew
+alias cat='ccat'
 
 alias rmrf='rm -rf'
 

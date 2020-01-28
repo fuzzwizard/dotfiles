@@ -8,7 +8,7 @@ ZSH_THEME="af-magic"
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm node docker-compose)
+plugins=(git npm node docker docker-compose)
 
 # Load ZSH stuff firstmost
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -41,6 +41,5 @@ export PATH="$PATH:/Users/$(whoami)/.cargo/bin"
 export PATH="/Users/$(whoami)/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 
 eval "$(thefuck --alias)";
-
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

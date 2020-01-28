@@ -1,50 +1,49 @@
+#!/bin/bash
 alias d="docker-compose"
 
-__yamldir_mercury="/Users/msmall/Work/docker-compose/mercury"
-__yamldir_mercury_min="/Users/msmall/Work/docker-compose/mercury-min"
-__yamldir_asset="/Users/msmall/Work/docker-compose/asset"
-export DOCKER_COMPOSE_LOCATION="$YAML_DIR"
+__yamldir_meue="/Users/msmall/devdocker/meue"
+__yamldir_meue_min="/Users/msmall/devdocker/docker-compose/meue-min"
+
+export DOCKER_COMPOSE_LOCATION="/Users/msmall/Work/docker-compose/"
 export COMPOSE_HTTP_TIMEOUT='1000'
 
 __DD_POCKET=""
 
-___dd () {
-	if [[ "$(pwd)" != $1 ]]; then
-		__DD_POCKET="$(pwd)";
-		cd $1;
+godir () {
+	local workdir="$(pwd)";
+	if [[ workdir != $1 ]]; then
+		__DD_POCKET=workdir;
+		cd $1 || exit;
 	elif [[ -n $__DD_POCKET ]]; then
-		cd $__DD_POCKET;
+		cd "$__DD_POCKET" || exit;
 		__DD_POCKET="";
-	else;
-		echo "Nowhere to navigate.";
+	else
+		echo "😩 Nowhere to navigate.";
 	fi;
 }
 
-dd () {
-	___dd $__yamldir_mercury;
+dd() {
+	godir $__yamldir_meue;
 }
 
-ddm () {
-	___dd $__yamldir_mercury_min;
+ddm() {
+	godir $__yamldir_meue_min;
 }
 
-dda () {
-	___dd $__yamldir_asset;
-}
 docker_grep() {
-	d logs -f --tail 1000 $1 | grep -n "$2"
+	d logs -f --tail 1000 "$1" | grep -n "$2"
 }
 
 docker_tail_ack() {
-	d logs -f --tail 1000 $1 | ack --passthru "$2"
+	d logs -f --tail 1000 "$1" | ack --passthru "$2"
 }
 
 dexec() {
 	bash -c "clear && docker exec -it $1 sh"
 }
 
-alias hgcli="docker_tail_ack mercury-client '｢wdm｣'"
-alias hgser="docker_tail_ack mercury-server '###'"
+alias mcli="docker_tail_ack meue-client '｢wdm｣'"
+alias mser="docker_tail_ack meue-server '###'"
 
 alias dedangle="docker volume rm \"$(docker volume ls -qf dangling=true)\""
-alias sc="cd ~/secretcrimes"
+alias sc="cd ~/Work"

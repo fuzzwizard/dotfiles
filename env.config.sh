@@ -2,7 +2,9 @@
 setopt HIST_IGNORE_ALL_DUPS
 
 # source the local bins first
-export PATH=./node_modules/.bin:$PATH
+# export PATH=./node_modules/.bin:$PATH
 
 # luarocks import
 # export PATH=$PATH:/usr/local/lib/luarocks/bin/
+
+export PATH="$DEVDOCKER_DIR/misc/bin:$PATH"
